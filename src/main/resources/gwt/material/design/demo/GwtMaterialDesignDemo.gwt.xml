@@ -23,6 +23,9 @@
     <inherits name="gwt.material.design.addins.GWTMaterialAddins"/>
     <inherits name="com.googlecode.gwt.charts.Charts"/>
 
+    <!-- GWT Polymer -->
+    <inherits name="com.vaadin.polymer.Elements"/>
+
     <inherits name="gwt.material.design.demo.client.Resources"/>
 
     <!-- Specify the paths for translatable code-->

@@ -1,0 +1,195 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:i='urn:import:com.vaadin.polymer.iron.widget'
+             xmlns:p='urn:import:com.vaadin.polymer.paper.widget'>
+
+    <g:HTMLPanel addStyleNames="button-sample">
+
+        <style is="custom-style">
+            .button-sample .horizontal-section {
+            min-width: 130px;
+            width: 200px;
+            display: inline-block;
+            }
+
+            .button-sample paper-button {
+            display: block;
+            margin-bottom: 24px;
+            }
+
+            .button-sample paper-button.colorful {
+            color: #4285f4;
+            }
+
+            .button-sample paper-button[raised].colorful {
+            background: #4285f4;
+            color: #fff;
+            }
+
+            .button-sample paper-button[toggles] {
+            transition: background-color 0.3s;
+            }
+
+            .button-sample paper-button[toggles][active] {
+            background-color: rgba(0, 0, 0, 0.25);
+            }
+
+            .button-sample paper-button[toggles][active].colorful {
+            background-color: rgba(66, 133, 244, 0.25);
+            }
+
+            .button-sample paper-button[toggles][active][raised].colorful {
+            background-color: rgba(66, 133, 244, 0.75);
+            }
+
+            .button-sample paper-button.blue {
+            color: var(--paper-light-blue-500);
+            --paper-button-flat-focus-color: var(--paper-light-blue-50);
+            }
+            .button-sample paper-button.blue:hover {
+            background: var(--paper-light-blue-50);
+            }
+            .button-sample paper-button.red {
+            color: var(--paper-red-500);
+            --paper-button-flat-focus-color: var(--paper-red-50);
+            }
+            .button-sample paper-button.red:hover {
+            background: var(--paper-red-50);
+            }
+            .button-sample paper-button.green {
+            color: var(--paper-green-500);
+            --paper-button-flat-focus-color: var(--paper-green-50);
+            }
+            .button-sample paper-button.green:hover {
+            background: var(--paper-green-50);
+            }
+            .button-sample paper-button.orange {
+            color: var(--paper-orange-500);
+            --paper-button-flat-focus-color: var(--paper-orange-50);
+            }
+            .button-sample paper-button.orange:hover {
+            background: var(--paper-orange-50);
+            }
+
+            .button-sample paper-button.hover:hover {
+            background: #eee;
+            }
+
+            .button-sample paper-button.ripple::shadow paper-ripple {
+            color: var(--paper-pink-a200);
+            }
+
+            .button-sample paper-button.ripple paper-ripple {
+            color: var(--paper-pink-a200);
+            }
+
+            paper-checkbox {
+            --paper-checkbox-checked-color: var(--paper-light-blue-500);
+            --paper-checkbox-checked-ink-color: var(--paper-light-blue-500);
+            --paper-checkbox-unchecked-color: var(--paper-light-blue-900);
+            --paper-checkbox-unchecked-ink-color: var(--paper-light-blue-900);
+            }
+
+            paper-checkbox.p-red {
+            --paper-checkbox-checked-color: var(--paper-red-500);
+            --paper-checkbox-checked-ink-color: var(--paper-red-500);
+            --paper-checkbox-unchecked-color: var(--paper-red-900);
+            --paper-checkbox-unchecked-ink-color: var(--paper-red-900);
+            }
+
+            paper-checkbox.p-green {
+            --paper-checkbox-checked-color: var(--paper-green-500);
+            --paper-checkbox-checked-ink-color: var(--paper-green-500);
+            --paper-checkbox-unchecked-color: var(--paper-green-900);
+            --paper-checkbox-unchecked-ink-color: var(--paper-green-900);
+            }
+
+            paper-checkbox.p-orange {
+            --paper-checkbox-checked-color: var(--paper-orange-500);
+            --paper-checkbox-checked-ink-color: var(--paper-orange-500);
+            --paper-checkbox-unchecked-color: var(--paper-orange-900);
+            --paper-checkbox-unchecked-ink-color: var(--paper-orange-900);
+            }
+
+            iron-overlay-backdrop{
+            z-index: 999 !important;
+            }
+
+            paper-dialog{
+            z-index: 1000 !important;
+            }
+
+            .fab-sample paper-fab.p-blue {
+            --paper-fab-background: var(--paper-light-blue-500);
+            }
+
+            .fab-sample paper-fab.p-red {
+            --paper-fab-background: var(--paper-red-500);
+            }
+
+            .fab-sample paper-fab.p-green {
+            --paper-fab-background: var(--paper-green-500);
+            }
+
+            .fab-sample paper-fab.p-orange {
+            --paper-fab-background: var(--paper-orange-500);
+            }
+        </style>
+
+        <div class="horizontal-section-container layout">
+            <div>
+                <h4>Buttons</h4>
+                <div class="horizontal-section">
+                    <p:PaperButton>button</p:PaperButton>
+                    <p:PaperButton addStyleNames="colorful">colorful</p:PaperButton>
+                    <p:PaperButton disabled="true">disabled</p:PaperButton>
+                    <p:PaperButton noink="true">noink</p:PaperButton>
+                    <p:PaperButton noink="false" addStyleNames="colorful custom"><i:IronIcon icon="check"/>ok</p:PaperButton>
+                    <p:PaperButton addStyleNames="custom"><i:IronIcon icon="clear"/>cancel</p:PaperButton>
+                </div>
+                <div class="horizontal-section">
+                    <p:PaperButton raised="true">button</p:PaperButton>
+                    <p:PaperButton tabindex="0" raised="true" addStyleNames="colorful">colorful</p:PaperButton>
+                    <p:PaperButton tabindex="0" raised="true" disabled="true">disabled</p:PaperButton>
+                    <p:PaperButton tabindex="0" raised="true" noink="true">noink</p:PaperButton>
+                    <p:PaperButton tabindex="0" raised="true" addStyleNames="colorful custom"><i:IronIcon icon="check"/>ok</p:PaperButton>
+                    <p:PaperButton tabindex="0" raised="true" addStyleNames="custom"><i:IronIcon icon="clear"/>cancel</p:PaperButton>
+                </div>
+                <div class="horizontal-section">
+                    <p:PaperButton tabindex="0" toggles="true">button</p:PaperButton>
+                    <p:PaperButton tabindex="0" toggles="true" raised="true" noink="true">noink</p:PaperButton>
+                    <p:PaperButton tabindex="0" toggles="true" active="true" addStyleNames="colorful">colorful</p:PaperButton>
+                    <p:PaperButton tabindex="0" toggles="true" raised="true" active="true" addStyleNames="colorful">colorful</p:PaperButton>
+                    <p:PaperButton tabindex="0" toggles="true" addStyleNames="colorful custom"><i:IronIcon icon="check"/>ok</p:PaperButton>
+                    <p:PaperButton tabindex="0" toggles="true" addStyleNames="custom"><i:IronIcon icon="clear"/>cancel</p:PaperButton>
+                </div>
+            </div>
+            <div>
+                <h4>Checkbox</h4>
+                <p:PaperCheckbox checked="true">Oxygen</p:PaperCheckbox>
+                <p:PaperCheckbox addStyleNames="p-red" checked="true">Carbon</p:PaperCheckbox>
+                <p:PaperCheckbox addStyleNames="p-orange" checked="true">Hydrogen</p:PaperCheckbox>
+                <p:PaperCheckbox addStyleNames="p-green" checked="true">Nitrogen</p:PaperCheckbox>
+                <p:PaperCheckbox addStyleNames="p-blue" checked="true">Calcium</p:PaperCheckbox>
+            </div>
+            <div>
+                <h4>Dialogs</h4>
+                <p:PaperButton ui:field="animatedBtn">transitions</p:PaperButton>
+                <p:PaperDialog ui:field="animatedDlg" withBackdrop="true" entryAnimation="scale-up-animation" exitAnimation="fade-out-animation">
+                    <h2>Dialog Title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </p:PaperDialog>
+            </div>
+            <div>
+                <h4>Floating Action Buttons</h4>
+                <p:PaperFab icon="arrow-forward" title="arrow-forward" addStyleNames="p-blue"></p:PaperFab>
+                <p:PaperFab icon="create" title="create" addStyleNames="p-red"></p:PaperFab>
+                <p:PaperFab icon="favorite" title="heart" addStyleNames="p-orange"></p:PaperFab>
+                <p:PaperFab mini="true" icon="done" title="done" addStyleNames="p-green"></p:PaperFab>
+                <p:PaperFab mini="true" icon="reply" title="reply" addStyleNames="p-blue"></p:PaperFab>
+            </div>
+        </div>
+
+    </g:HTMLPanel>
+</ui:UiBinder>

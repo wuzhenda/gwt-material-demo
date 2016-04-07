@@ -8,6 +8,7 @@ import gwt.material.design.demo.client.application.apps.AppsModule;
 import gwt.material.design.demo.client.application.charts.ChartsModule;
 import gwt.material.design.demo.client.application.components.ComponentsModule;
 import gwt.material.design.demo.client.application.gettingstarted.GettingStartedModule;
+import gwt.material.design.demo.client.application.polymer.PolymerModule;
 import gwt.material.design.demo.client.application.roadmap.RoadMapModule;
 import gwt.material.design.demo.client.application.showcase.ShowcaseModule;
 import gwt.material.design.demo.client.application.style.StyleModule;
@@ -19,6 +20,7 @@ public class ApplicationModule extends AbstractPresenterModule {
         bindPresenter(ApplicationPresenter.class, ApplicationPresenter.MyView.class,
                 ApplicationView.class, ApplicationPresenter.MyProxy.class);
 
+        install(new PolymerModule());
         install(new AppsModule());
         install(new RoadMapModule());
         install(new TemplatesModule());
